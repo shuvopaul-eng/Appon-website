@@ -1,0 +1,156 @@
+#slider{
+  margin:0;
+  padding:0; 
+}
+
+.skdslider {
+  width:100%;
+  position: relative;
+  display: block;
+  overflow:hidden;
+}
+.skdslider .slide {
+   display: none;
+}
+.skdslider .slide img {
+   width: 100%;
+   height:100%;
+   border:0;
+}
+
+.skdslider ul.slide-navs {
+    bottom: 20px;
+    left: 47%;
+    position: absolute;
+	  list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.skdslider ul.slide-navs li {
+  float: left;
+	background: #fff;
+	height:12px;
+	width:12px;
+	margin:0 13px;
+	cursor:pointer;
+	border-radius: 50%;
+
+	position: relative;
+}
+.skdslider ul.slide-navs li::after{
+	content: "";
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	border: 2px solid rgba(255,255,255,0);
+	border-radius: 50%;
+	top: -9px;
+	left: -9px;
+}
+.skdslider ul.slide-navs li.active::after{
+	border: 2px solid rgba(255,255,255,1);
+}
+
+.skdslider .slide-desc {
+    background: rgba(0, 0, 0, .5);
+	text-align: center;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+	  display:inline-block;
+	 
+}
+
+
+
+.skdslider .slide-desc h2 {
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: 200px;
+	font-weight: 600;
+    text-transform: uppercase;
+	
+}
+
+.skdslider .slide-desc p {
+    color: #ddd;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 5px;
+	padding-top: 10px;
+}
+
+
+.skdslider a.prev{
+  background: url("../img/left.png") no-repeat scroll 0 0 transparent;
+	width:35px;
+	height:35px;
+	display:block;
+	cursor:pointer;
+	position:absolute;
+	top:50%;
+	left:2%;
+	margin-top:-17px;
+}
+
+.skdslider a.next{
+  background: url("../img/right.png") no-repeat scroll 0 0 transparent;
+	width:35px;
+	height:35px;
+	display:block;
+	cursor:pointer;
+	position:absolute;
+	top:50%;
+	right:2%;
+	margin-top:-17px;
+}
+.skdslider a.prev:hover {
+  
+}
+.skdslider a.next:hover {
+  
+}
+
+.skdslider a.play {
+    background:;
+	width:35px;
+	height:35px;
+	display:none;
+	cursor:pointer;
+	position:absolute;
+	top:50%;
+	left:48%;
+	margin-top:-17px;
+}
+
+.skdslider a.pause{
+  background: url("image/pause.png") no-repeat scroll center center transparent;
+	width:35px;
+	height:35px;
+	display:none;
+	cursor:pointer;
+	position:absolute;
+	top:50%;
+	left:48%;
+	margin-top:-17px;
+}
+/*Some Responsive CSS */
+@media screen and (max-width:767px) {
+	.skdslider .slide-desc > h2 {
+		font-size: 20px;
+		margin-bottom: 5px;
+		margin-top: 5px;
+	}
+	
+	.skdslider .slide-desc > p {
+		font-size: 14px;
+		line-height: 15px;
+		margin-top: 5px;
+	}
+	.skdslider .slide-desc > p a.more {
+		font-size:14px;
+	}
+}
